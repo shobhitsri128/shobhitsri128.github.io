@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    </script>
+    <title>Insurance</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-app="Insurance" ng-controller="mainController">
+    <nav class="navbar navbar-expand-md navbar-dark mdb-color mb-5">
+        <div class="mr-auto">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb d-inline-flex pl-0 pt-0">
+                    <li class="breadcrumb-item"><a class="white-text" href="#!">Home</a></li>
+                    <li class="breadcrumb-item active">{{heading}}</li>
+                </ol>
+            </nav>
+
+        </div>
+    </nav>
+    <div>
+        <div class="container-fluid">
+            <div ui-view>
+                <!-- // pages comes here -->
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="footer">
+      <center><span>Deisgned By <b>Shobhit Srivastava</b><i class="fa fa-copyright"></i></span></center>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

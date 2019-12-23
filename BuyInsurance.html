@@ -1,0 +1,92 @@
+<div class="container-fluid" >
+    <div class="jumbotron" style="background-color:#ebf1f2">
+        <h1>INSURANCE FORM</h1>
+    </div>
+    <form name="fill_insurance" role="form">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="insurance_for">Insurance For : <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control" name="insurance_for" ng-model="insurance_for" ng-options="x.key as x.value for x in insurance_for_dropdown" required>
+                            <option value="" disabled>Choose One</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="fname">Name: <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="fname" class="form-control" ng-model="fname" placeholder="First Name" required>
+                        &nbsp;
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="lname" class="form-control" ng-model="lname" placeholder="Last Name">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="gender">Gender : <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <input type="radio" name="gender" ng-model="gender" value="male" checked> Male
+                            <input type="radio" name="gender" ng-model="gender" value="female"> Female
+                            <input type="radio" name="gender" ng-model="gender" value="other"> Other
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="age">Age : <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="number" name="age" ng-model="age" class="form-control" placeholder="Age" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="phno">Mobile No. : <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-1 col-sm-4">
+                        <select class="form-control" name="country_code" style="width:150px" ng-model="country_code" ng-options="x.Code as x.Code+'( '+x.Name+' )' for x in country_code_dropdown" required>
+                          <option value="" disabled>COUNTRY CODE</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-sm-8">
+                        <input type="number" name="phno" class="form-control" ng-model="phno" placeholder="Mobile Number" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="city">City. : <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="city" ng-model="city" class="form-control" placeholder="City" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="email">Email : <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="email" name="email" class="form-control" ng-model="email" placeholder="Email" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="smoking">Smoking : <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="switch"><input type="checkbox" ng-model="smoking"><span class="slider round"></span></label>
+                        &nbsp;<span class="text-red" ng-if="smoking==false || smoking == undefined">No</span>
+                        <span class="text-green" ng-if="smoking==true">Yes</span>
+                    </div>
+                </div>
+                <br>
+                <center><button type="button" class="btn btn-primary" ng-disabled="fill_insurance.$invalid" ng-click="get_quote()" name="get_quote">Get Quote <i class="fa fa-arrow-right"></i></button>&nbsp;
+                    <button type="button" class="btn btn-warning" name="clear" ng-click="clear()">Clear <i class="fa fa-trash"></i></button></center>
+            </div>
+        </div>
+    </form>
+    <br>
+    <br>
+</div>
